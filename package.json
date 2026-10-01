@@ -1,5 +1,5 @@
 {
-  "name": "svakom-bridge",
+  "name": "toy-bridge",
   "scripts": { "start": "node bridge/index.js" },
   "dependencies": {
     "express": "^4.18.0",
