@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "toy-bridge"
+version = "0.2.0"
+description = "A configurable BLE inspection and MCP bridge scaffold"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "bleak>=0.21,<4",
+  "fastmcp>=2,<4",
+  "python-dotenv>=1,<2",
+]
+
+[project.scripts]
+toy-bridge = "toy_bridge.server:main"
+toy-bridge-scan = "toy_bridge.cli:scan_main"
+toy-bridge-inspect = "toy_bridge.cli:inspect_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
